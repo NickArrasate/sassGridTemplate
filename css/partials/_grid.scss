@@ -1,0 +1,24 @@
+[class*='column-']{
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px;
+  background: #369;
+  margin: 1em;
+}
+
+
+@media #{$breakpoint-medium} {
+
+  .wrapper {
+      width: 95%;
+      max-width: $grid-max-width;
+      }
+
+  @for $i from 1 through 12 {
+    .column-#{$i}{
+      width: 100% / 12 * $i;
+    }
+  }
+  
+}
